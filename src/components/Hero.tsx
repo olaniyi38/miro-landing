@@ -16,44 +16,42 @@ const Hero: FC = () => {
 
 	useGSAP(
 		() => {
-			document.addEventListener("DOMContentLoaded", () => {
-				tlRef.current = gsap
-					.timeline()
-					.from("[data-anim='reveal'] .word", {
-						delay: 0.5,
+			tlRef.current = gsap
+				.timeline()
+				.from("[data-anim='reveal'] .word", {
+					delay: 0.5,
+					duration: 1,
+					y: 200,
+					autoAlpha: 0,
+				})
+				.from(
+					".hero__img",
+					{
 						duration: 1,
-						y: 200,
+						opacity: 0,
+						scale: 1.2,
 						autoAlpha: 0,
-					})
-					.from(
-						".hero__img",
-						{
-							duration: 1,
-							opacity: 0,
-							scale: 1.2,
-							autoAlpha: 0,
-						},
-						"-=.6"
-					)
-					.from(
-						".hero__cta",
-						{
-							duration: 0.8,
-							opacity: 0,
-							autoAlpha: 0,
-						},
-						"-=.3"
-					)
-					.from(
-						".hero__reviews",
-						{
-							duration: 0.4,
-							opacity: 0,
-							autoAlpha: 0,
-						},
-						"-=.4"
-					);
-			});
+					},
+					"-=.6"
+				)
+				.from(
+					".hero__cta",
+					{
+						duration: 0.8,
+						opacity: 0,
+						autoAlpha: 0,
+					},
+					"-=.3"
+				)
+				.from(
+					".hero__reviews",
+					{
+						duration: 0.4,
+						opacity: 0,
+						autoAlpha: 0,
+					},
+					"-=.4"
+				);
 		},
 		{ scope: containerRef }
 	);
