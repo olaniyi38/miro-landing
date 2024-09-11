@@ -16,12 +16,11 @@ const Hero: FC = () => {
 
 	useGSAP(
 		() => {
-			window.onload = () => {
-				console.log("loaded");
+			document.addEventListener("DOMContentLoaded", () => {
 				tlRef.current = gsap
-					.timeline( )
-					.from( "[data-anim='reveal'] .word", {
-						delay:.5,
+					.timeline()
+					.from("[data-anim='reveal'] .word", {
+						delay: 0.5,
 						duration: 1,
 						y: 200,
 						autoAlpha: 0,
@@ -54,7 +53,7 @@ const Hero: FC = () => {
 						},
 						"-=.4"
 					);
-			};
+			});
 		},
 		{ scope: containerRef }
 	);
