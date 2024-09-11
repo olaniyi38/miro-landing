@@ -36,7 +36,11 @@ const Section2: FC = () => {
 						y: 50,
 					},
 					"-=.4"
-				);
+				)
+				.from(".section2__banner", {
+					duration: 0.8 ,
+					opacity: 0,
+				},"-=.4");
 		},
 		{ scope: containerRef }
 	);

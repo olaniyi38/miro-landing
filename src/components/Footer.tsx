@@ -9,7 +9,6 @@ import MiroSvg from "@/assets/svgs/miro.svg?react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import SplitText from "./SplitText";
 import { useRef } from "react";
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);

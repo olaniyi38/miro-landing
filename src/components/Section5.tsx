@@ -28,7 +28,7 @@ const Section5 = () => {
 					opacity: 0,
 					duration: 0.5,
 					delay: 0.8,
-				});
+				},"-=.6");
 		},
 		{ scope: containerRef }
 	);

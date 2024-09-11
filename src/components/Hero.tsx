@@ -52,7 +52,7 @@ const Hero: FC = () => {
 							opacity: 0,
 							autoAlpha: 0,
 						},
-						"+=.2"
+						"-=.4"
 					);
 			};
 		},
