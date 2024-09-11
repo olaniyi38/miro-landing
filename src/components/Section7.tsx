@@ -7,7 +7,9 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitText from "./SplitText";
 import { useRef } from "react";
+//@ts-expect-error nothing
 import FigmaSvg from "@/assets/svgs/figma.svg?react";
+//@ts-expect-error nothing
 import SketchSvg from "@/assets/svgs/sketch.svg?react";
 import { SiAdobexd, SiNotion } from "react-icons/si";
 

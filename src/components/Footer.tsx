@@ -2,8 +2,11 @@ import { footerLinks } from "@/data";
 import FooterLinkGroup from "./FooterLinkGroup";
 import { FaGlobe, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa6";
+//@ts-expect-error nothing
 import AppleSvg from "@/assets/svgs/apple.svg?react";
+//@ts-expect-error nothing
 import PlaystoreSvg from "@/assets/svgs/playstore.svg?react";
+//@ts-expect-error nothing
 import MiroSvg from "@/assets/svgs/miro.svg?react";
 
 import gsap from "gsap";
