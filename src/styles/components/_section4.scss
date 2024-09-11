@@ -1,0 +1,95 @@
+@use "../utils" as *;
+
+.section4 {
+    &__container {
+        padding: 4rem 0rem;
+        @include flex();
+        flex-wrap: wrap;
+    }
+
+    &__content {
+        flex: 1 1 20rem;
+        font-size: 1.15rem;
+        @include flex($direction: column, $align: stretch);
+        gap: 2rem 0rem;
+        padding-left: 6rem;
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        font-size: 3rem;
+        font-weight: 700;
+    }
+
+    &__text {
+        max-width: 80%;
+    }
+
+    &__link {
+        @include flex();
+        gap: 0rem 0.3rem;
+        color: $blue;
+        text-decoration: underline;
+        text-underline-offset: 0.3rem;
+    }
+
+    &__img {
+        flex: 1 1 20rem;
+
+        img {
+            margin-right: auto;
+        }
+    }
+
+    @media (width <=1024px) {
+        &__title {
+            font-size: 2.5rem;
+
+        }
+
+
+        &__content {
+            padding-left: 4rem;
+        }
+
+        &__text {
+            max-width: none;
+        }
+
+    }
+
+    @media (width <=768px) {
+        &__container {
+            padding: 3rem 0rem;
+        }
+
+        &__title {
+            font-size: 2.2rem;
+        }
+
+        &__content {
+            padding-left: 2rem;
+        }
+
+        &__text {
+            font-size: 1.05rem;
+        }
+    }
+
+    @media (width <=540px) {
+        &__content {
+            padding-left: 0rem;
+        }
+    }
+
+    @media (width <=480px) {
+        &__content {
+            padding-top: 2rem;
+        }
+
+        &__title {
+            font-size: 1.8rem;
+        }
+    }
+}

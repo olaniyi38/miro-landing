@@ -1,0 +1,47 @@
+@use "../utils" as *;
+
+
+.section9 {
+    &__container {
+        padding: 6rem 0rem;
+    }
+
+    &__header {
+        @include flex($direction: column);
+        gap: 1.5rem 0rem;
+    }
+
+    &__title {
+        font-size: 3rem;
+    }
+
+    &__testimonials {
+        padding: 5rem 0rem 0rem 0rem;
+    }
+
+    @media (width <=1024px) {
+        &__title {
+            font-size: 2.5rem;
+        }
+    }
+
+    @media (width <=768px) {
+        &__container {
+            padding: 3rem 0rem;
+        }
+
+        &__title {
+            font-size: 2.2rem;
+        }
+    }
+
+    @media (width <=480px) {
+        &__header {
+            align-items: stretch;
+        }
+
+        &__title {
+            font-size: 1.8rem;
+        }
+    }
+}

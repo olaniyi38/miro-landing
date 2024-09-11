@@ -1,0 +1,67 @@
+@use "../utils" as *;
+
+.section5 {
+    &__container {
+        padding: 2rem 0rem;
+        display: grid;
+        align-items: center;
+
+
+    }
+
+    &__content {
+        grid-area: 1 / 2;
+        margin-left: auto;
+        @include flex($direction: column);
+        gap: 1rem 0rem;
+        padding: 2rem 13rem 0 0;
+
+        p {
+            font-size: 1.05rem;
+        }
+
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        font-size: 1.3rem;
+    }
+
+    &__img {
+        grid-area: 1/2;
+
+
+
+    }
+
+    @media (width <=768px) {
+
+        padding: 1rem ;
+        text-align: center;
+
+        &__container {
+            background: $dark-blue;
+            color: $white;
+            display: block;
+            border-radius: .5rem;
+            padding: 3rem 0rem;
+        }
+
+        &__content {
+            padding: 0;
+            gap: 1.5rem 0rem;
+        }
+
+        &__img {
+            display: none;
+        }
+    }
+
+    @media (width <= 480px) {
+        &__container {
+            padding: 1.5rem;
+        }
+    }
+}

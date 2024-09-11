@@ -1,0 +1,23 @@
+@use "../utils" as *;
+
+.button {
+    @include flex($justify: center);
+    gap: 0rem 0.2rem;
+    background: $blue;
+    color: $white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5rem;
+    font-weight: 500;
+
+    &--inverted {
+        background: $white;
+        color: $blue;
+        outline:1px solid $blue;
+    }
+
+        @media (width <=768px) {
+            padding: .5rem 1.2rem;
+        }
+
+
+}

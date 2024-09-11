@@ -1,0 +1,44 @@
+@use "../utils" as *;
+
+.footer-link-group {
+    margin-bottom: 2rem; // Adjust as needed
+
+    &__title {
+        margin-bottom: 2rem; // Adjust as needed
+        font-size: 1.2rem; // Adjust as needed
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem 0rem; // Adjust as needed
+
+    }
+
+    &__link {
+        color: #fff; // Assuming white color for links
+        text-decoration: none;
+
+        &:hover {
+            color: #ccc; // Adjust hover color as needed
+        }
+
+        &--bottom {
+            @include flex();
+            gap: 0rem .5rem;
+            margin-top: 2rem;
+            text-decoration: underline;
+        }
+    }
+
+    @media (width <=540px) {
+        &__title {
+            font-size: 1.1rem;
+        }
+
+        &__link {
+            font-size: .9rem;
+        }
+    }
+
+}

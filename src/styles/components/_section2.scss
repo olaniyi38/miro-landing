@@ -1,0 +1,115 @@
+@use "../utils" as *;
+
+.section2 {
+    &__container {
+        padding: 5rem 0rem 4rem 0rem;
+        @include flex($justify: center, $direction: column);
+        gap: 3rem 0rem;
+        position: relative;
+    }
+
+    &__title {
+        font-size: 3.2rem;
+        font-weight: 700;
+        max-width: 48rem;
+        text-align: center;
+    }
+
+    &__banner {
+        position: absolute;
+        inset: 2.5rem 25% auto auto;
+        background: $dark-yellow;
+        font-size: .7rem;
+        text-transform: uppercase;
+        padding: .2rem .5rem;
+        font-weight: 600;
+        border-radius: .5rem;
+        letter-spacing: 1px;
+        transform: rotate(15deg)
+    }
+
+    &__features {
+        @include flex($align: start);
+        flex-wrap: wrap;
+        gap: 2rem 6rem;
+        margin-bottom: 2rem;
+    }
+
+    &__feature {
+        flex: 1 1 15rem;
+        max-width: 20rem;
+        // text-wrap: balance;
+
+        .title {
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .text {
+            margin-top: 1.5rem;
+            font-size: 1.12rem;
+            color: $gray-blue;
+        }
+
+        a {
+            color: lighten($color: blue, $amount: 10);
+        }
+    }
+
+    @media (width <=1024px) {
+
+        &__title {
+            font-size: 2.5rem;
+            max-width: 30rem;
+        }
+
+        &__features {
+            gap: 3rem 2rem;
+        }
+
+        &__banner {
+            inset: 3rem 20% auto auto;
+        }
+
+    }
+
+    @media (width <=768px) {
+        &__container {
+            padding-block: 3rem;
+        }
+
+        &__title {
+            font-size: 2.2rem;
+            max-width: 30rem;
+        }
+
+        &__feature {
+            .title {
+                font-size: 1.2rem;
+            }
+
+            .text {
+                font-size: 1.05rem;
+            }
+        }
+
+        &__banner {
+            inset: 1rem 20% auto auto;
+            transform: rotate(10deg);
+            padding: .2rem;
+        }
+        
+    }
+
+    @media (width <=480px) {
+        
+        &__title {
+            font-size: 1.8rem;
+        }
+        
+        &__banner {
+            font-size: .5rem;
+            inset: 1rem 10% auto auto;
+        }
+    }
+}

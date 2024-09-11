@@ -1,0 +1,65 @@
+@use "../utils" as *;
+
+.section10 {
+    padding: 6rem 1rem 8rem 1rem;
+
+    &__container {
+        padding: 5rem 0rem; // Space inside the section
+        border-radius: 12px; // Rounded corners for the section
+        text-align: center; // Center align the content
+        background-color: #0d0d38; // Dark blue background matching the image
+        @include flex($direction: column);
+
+
+    }
+
+    &__title {
+        font-size: 3rem; // Large font for the title
+        color: $white; // White text color
+        margin-bottom: 1rem; // Space below the title
+        font-weight: 700; // Bold weight for emphasis
+    }
+
+    &__description {
+        font-size: 1.125rem; // Smaller font size for description
+        color: #b1b5c9; // Light grayish-blue color
+        margin-bottom: 2rem; // Space between description and link
+    }
+
+    &__link {
+        display: inline-block;
+        font-size: 1rem;
+        color: #b1b5c9; // Same as description text
+        text-decoration: underline; // Underline for the link
+        margin-bottom: 2rem; // Space between link and button
+        transition: color 0.3s; // Smooth transition for hover effect
+
+        &:hover {
+            color: #ffffff; // White color on hover
+        }
+    }
+
+    .button {
+        font-size: 1.3rem;
+    }
+
+    @media (width <=1024px) {
+        &__title {
+            font-size: 2.5rem;
+        }
+    }
+
+    @media (width <=480px) {
+        &__container {
+            padding: 3rem 0rem;
+        }
+
+        &__title {
+            font-size: 2.2rem;
+        }
+
+        .button {
+            font-size: inherit;
+        }
+    }
+}

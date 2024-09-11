@@ -1,0 +1,91 @@
+@use "../utils" as *;
+
+.hero {
+    &__container {
+        @include flex();
+        flex-wrap: wrap;
+        gap: 0rem 5rem;
+        color: $light-blue;
+        padding: 5rem 0rem;
+    }
+
+    &__content {
+        flex: 1 1 20rem;
+        @include flex($direction: column, $align: stretch);
+        gap: 2rem 0rem;
+        max-width: 35rem;
+    }
+
+    [data-anim='reveal'] .word,
+    [data-anim="true"] {
+        visibility: hidden;
+        opacity: 1;
+    }
+
+    &__img {
+        flex: 3 1 15rem;
+
+
+        img {
+            width: 100%;
+            height: auto;
+
+        }
+    }
+
+    &__title {
+        font-size: 3.3rem;
+        font-weight: bold;
+        color: $dark-blue;
+        line-height: 1;
+    }
+
+    &__text {
+        font-size: 1.1rem;
+    }
+
+    &__cta {
+        @include flex($direction: column, $align: stretch);
+        gap: 1rem 0rem;
+
+        input {
+            outline: 1px solid $light-blue;
+            width: 100%;
+            font-size: 1.1rem;
+            padding: 0.5rem 1.5rem;
+            border-radius: 5rem;
+        }
+
+        .button {
+            width: 100%;
+        }
+
+        small {
+            padding-left: 0.4rem;
+        }
+    }
+
+    @media (width <=1024px) {
+        &__container {
+            gap: 2rem 3rem;
+        }
+
+        &__title {
+            font-size: 2.5rem;
+        }
+
+        &__img {
+            flex: 1 1 25rem;
+        }
+    }
+
+    @media (width <=768px) {
+        &__container {
+            padding-block: 3rem;
+        }
+
+        &__title {
+            font-size: 2.2rem;
+        }
+    }
+}

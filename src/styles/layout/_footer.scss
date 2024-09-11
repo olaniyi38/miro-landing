@@ -1,0 +1,96 @@
+@use "../utils/" as *;
+
+.footer {
+    background: $dark-blue;
+    color: $white;
+
+    &__container {
+        padding: 3rem;
+    }
+
+    &__links {
+        @include flex($align: flex-start);
+        flex-wrap: wrap;
+        gap: 2rem 7rem;
+
+    }
+
+    &__bottom {
+        @include flex($justify: space-between);
+        flex-wrap: wrap;
+        gap: 2rem 0rem;
+        padding-top: 2rem;
+        margin-top: 2rem;
+        border-top: 1px solid $cream;
+        
+        >div {
+            @include flex();
+            flex-wrap: wrap;
+            gap: 1rem;
+
+            &:first-child {
+                gap: 1rem 2.2rem;
+
+                svg {
+                    width: 1.6rem;
+                    height: auto
+                }
+            }
+
+            a {
+                @include flex();
+                gap: 0rem .4rem;
+            }
+        }
+
+        .miro-svg {
+            width: 3rem;
+            height: auto;
+
+        }
+
+        .button-store {
+            outline: 1px solid $white;
+            @include flex();
+            padding: .5rem .8rem;
+            border-radius: .5rem;
+
+            div {
+                @include flex($direction: column, $align: stretch);
+                gap: 0rem 1rem;
+                text-align: left;
+                padding: 0rem 0rem 0rem .5rem;
+
+                span {
+                    font-weight: bold;
+                    font-size: 1rem;
+                    line-height: 1.15;
+
+
+                    &:first-child {
+                        font-weight: 100;
+                        font-size: .6rem;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+
+            svg {
+                width: 1.8rem;
+                height: auto;
+
+            }
+        }
+    }
+
+    @media (width <=1024px) {
+        &__links {
+            gap: 2rem 5rem;
+        }
+        &__bottom {
+            >div {
+                
+            }
+        }
+    }
+}

@@ -1,0 +1,95 @@
+@use "../utils" as *;
+
+.testimonial {
+    padding: 1.5rem; // 24px / 16px = 1.5rem
+    background-color: #ffffff;
+    border-radius: 0.5rem; // 8px / 16px = 0.5rem
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1); // 2px 4px / 16px
+
+    @include flex($direction: column, $align: stretch);
+
+
+
+    &__company {
+        font-size: 2.5rem; // 24px / 16px = 1.5rem
+        font-weight: bold;
+        margin-bottom: 1.5rem; // 16px / 16px = 1rem
+    }
+
+    &__quote {
+        font-size: 1rem; // 16px / 16px = 1rem
+        line-height: 1.5;
+        color: #666;
+        margin-bottom: 2rem; // 24px / 16px = 1.5rem
+    }
+
+    &__author {
+        display: flex;
+        align-items: center;
+        margin-top: auto;
+    }
+
+    &__author-image {
+        width: 3rem; // 48px / 16px = 3rem
+        height: 3rem; // 48px / 16px = 3rem
+        margin-right: 1rem; // 16px / 16px = 1rem
+
+        img {
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__author-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__author-name {
+        font-size: 0.875rem; // 14px / 16px = 0.875rem
+        font-weight: bold;
+        color: #333;
+        margin: 0;
+    }
+
+    &__author-position {
+        font-size: 0.75rem; // 12px / 16px = 0.75rem
+        color: #666;
+        margin: 0;
+    }
+}
+
+@media (width <=1024px) {
+
+    // 768px / 16px = 48rem
+    .testimonial {
+        max-width: 100%;
+
+        &__company {
+            font-size: 2rem; // 20px / 16px = 1.25rem
+        }
+
+        &__quote {
+            font-size: 1rem; // 14px / 16px = 0.875rem
+        }
+    }
+}
+
+// Add some basic responsiveness
+@media (width <=768px) {
+
+    // 768px / 16px = 48rem
+    .testimonial {
+        max-width: 100%;
+
+        &__company {
+            font-size: 1.5rem; // 20px / 16px = 1.25rem
+        }
+
+        &__quote {
+            font-size: 0.875rem; // 14px / 16px = 0.875rem
+        }
+    }
+}

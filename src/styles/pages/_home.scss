@@ -1,0 +1,22 @@
+@use '../utils' as *;
+
+.home {
+    section {
+        >div:first-child {
+            max-width: 80rem;
+            margin: 0 auto;
+            padding-inline: 2rem;
+        }
+    }
+
+    @media (width <=480px) {
+        section {
+            >div:first-child {
+                
+                padding-inline: 1rem;
+            }
+        }
+    }
+
+
+}

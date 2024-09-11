@@ -1,0 +1,31 @@
+@use "utils" as *;
+@use "base";
+@use "layout";
+@use "components";
+@use "pages";
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: $dark-blue;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1;
+    font-family: inter;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: bold;
+}
+
+a {
+    display: inline-block;
+    overflow: hidden;
+}

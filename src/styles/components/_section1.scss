@@ -1,0 +1,55 @@
+@use "../utils" as *;
+
+.section1 {
+
+    [data-anim='reveal'] .char,
+    &__logos {
+        visibility: hidden;
+        opacity: 1;
+    }
+
+    &__container {
+        padding: 5rem 0rem;
+
+
+        h3 {
+            font-size: 1.2rem;
+            color: $light-blue;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        div {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
+            align-items: center;
+
+            gap: 0rem 2.5rem;
+            margin: 2rem 0rem 0rem 0rem;
+            padding: 0rem 5rem;
+            color: $dark-blue;
+        }
+
+        svg {
+            flex: 0 1 5rem;
+            width: 5rem;
+            height: auto;
+
+        }
+    }
+
+    @media (width <=1024px) {
+        &__container {
+
+            div {
+                padding: 0rem 2rem;
+            }
+
+            svg {
+                width: 4rem;
+            }
+        }
+
+    }
+
+}
